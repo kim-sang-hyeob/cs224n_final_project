@@ -1,0 +1,123 @@
+{
+  "training_config": {
+    "model_name": "skt/kogpt2-base-v2",
+    "max_length": 512,
+    "num_epochs": 3,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "learning_rate": 0.0001,
+    "warmup_steps": 100,
+    "weight_decay": 0.01,
+    "use_mixed_precision": true,
+    "dataloader_num_workers": 4,
+    "full_finetuning": true,
+    "trainable_layers": 0,
+    "use_lora": false,
+    "lora_r": 32,
+    "lora_alpha": 64,
+    "lora_dropout": 0.05,
+    "lora_target_modules": [
+      "c_attn",
+      "c_proj",
+      "c_fc"
+    ],
+    "use_prefix_tuning": false,
+    "prefix_length": 30,
+    "prefix_dropout": 0.1,
+    "prefix_hidden_size": null,
+    "use_prompt_tuning": true,
+    "prompt_length": 20,
+    "prompt_init_method": "RANDOM",
+    "train_ratio": 0.8,
+    "validation_ratio": 0.1,
+    "test_ratio": 0.1,
+    "data_path": "data/prompt_dataset.json",
+    "topic_start_token": "<|topic:",
+    "topic_end_token": "|>",
+    "use_gpu": true,
+    "device": "cuda",
+    "output_dir": "outputs",
+    "model_save_dir": "saved_models",
+    "logs_dir": "logs",
+    "eval_steps": 500,
+    "save_steps": 1000,
+    "logging_steps": 500,
+    "max_new_tokens": 200,
+    "temperature": 0.8,
+    "top_k": 50,
+    "top_p": 0.9,
+    "do_sample": true,
+    "quiet_mode": false,
+    "progress_bar": true
+  },
+  "command_line_args": {
+    "full_finetuning": true,
+    "head_only": false,
+    "trainable_layers": 0,
+    "lora": false,
+    "lora_r": 32,
+    "lora_alpha": 64,
+    "lora_dropout": 0.05,
+    "lora_target_modules": [
+      "c_attn",
+      "c_proj",
+      "c_fc"
+    ],
+    "prefix_tuning": false,
+    "prefix_length": 30,
+    "prefix_dropout": 0.1,
+    "prefix_hidden_size": null,
+    "prompt_tuning": true,
+    "prompt_length": 20,
+    "prompt_init_method": "RANDOM",
+    "gpu": true,
+    "cpu": false,
+    "a100_optimized": false,
+    "mixed_precision": false,
+    "epochs": 3,
+    "lr": 5e-05,
+    "batch_size": 4,
+    "max_length": 512,
+    "quiet": false,
+    "model_name": "skt/kogpt2-base-v2",
+    "mode": "train",
+    "model_path": null
+  },
+  "model_info": {
+    "model_name": "skt/kogpt2-base-v2",
+    "total_parameters": 15360,
+    "vocab_size": 51203,
+    "max_length": 512
+  },
+  "training_history": {
+    "train_losses": [
+      11.24188519722987,
+      10.48901890425025,
+      10.334859313934105
+    ],
+    "val_losses": [
+      10.43158684686287,
+      10.16134605272529,
+      10.096745430194225
+    ],
+    "learning_rates": [
+      1.9767186470459042e-07,
+      1.7570832418185812e-07,
+      1.5374478365912585e-07,
+      1.317812431363936e-07,
+      1.0981770261366132e-07,
+      8.785416209092906e-08,
+      6.58906215681968e-08,
+      4.392708104546453e-08,
+      2.1963540522732265e-08,
+      0.0
+    ],
+    "final_train_loss": 10.334859313934105,
+    "final_val_loss": 10.096745430194225,
+    "best_val_loss": 10.096745430194225
+  },
+  "timestamp": {
+    "saved_at": "2025-06-08T03:58:33.102019",
+    "model_type": "best_model"
+  }
+}

@@ -1,0 +1,17 @@
+# .gitignore ─ Machine-Learning 기본
+*.pt
+*.ckpt
+*.safetensors
+*.bin
+*.h5
+*.onnx
+*.tar.gz
+*.zip
+*.7z
+*.npy
+*.npz
+*.json         # (매우 큰 파라미터 json 제외용)
+data/
+models/
+logs/
+results/

@@ -1,0 +1,109 @@
+{
+  "training_config": {
+    "model_name": "skt/kogpt2-base-v2",
+    "max_length": 512,
+    "num_epochs": 3,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "learning_rate": 0.0005,
+    "warmup_steps": 200,
+    "weight_decay": 0.01,
+    "use_mixed_precision": true,
+    "dataloader_num_workers": 4,
+    "full_finetuning": true,
+    "trainable_layers": 0,
+    "use_lora": true,
+    "lora_r": 32,
+    "lora_alpha": 64,
+    "lora_dropout": 0.05,
+    "lora_target_modules": [
+      "c_attn",
+      "c_proj",
+      "c_fc"
+    ],
+    "train_ratio": 0.8,
+    "validation_ratio": 0.1,
+    "test_ratio": 0.1,
+    "data_path": "data/prompt_dataset.json",
+    "topic_start_token": "<|topic:",
+    "topic_end_token": "|>",
+    "use_gpu": true,
+    "device": "cuda",
+    "output_dir": "outputs",
+    "model_save_dir": "saved_models",
+    "logs_dir": "logs",
+    "eval_steps": 500,
+    "save_steps": 1000,
+    "logging_steps": 500,
+    "max_new_tokens": 200,
+    "temperature": 0.8,
+    "top_k": 50,
+    "top_p": 0.9,
+    "do_sample": true,
+    "quiet_mode": false,
+    "progress_bar": true
+  },
+  "command_line_args": {
+    "full_finetuning": true,
+    "head_only": false,
+    "trainable_layers": 0,
+    "lora": true,
+    "lora_r": 32,
+    "lora_alpha": 64,
+    "lora_dropout": 0.05,
+    "lora_target_modules": [
+      "c_attn",
+      "c_proj",
+      "c_fc"
+    ],
+    "gpu": true,
+    "cpu": false,
+    "a100_optimized": false,
+    "mixed_precision": false,
+    "epochs": 3,
+    "lr": 5e-05,
+    "batch_size": 4,
+    "max_length": 512,
+    "quiet": false,
+    "model_name": "skt/kogpt2-base-v2",
+    "mode": "train",
+    "model_path": null
+  },
+  "model_info": {
+    "model_name": "skt/kogpt2-base-v2",
+    "total_parameters": 4718592,
+    "vocab_size": 51203,
+    "max_length": 512
+  },
+  "training_history": {
+    "train_losses": [
+      8.894158848555794,
+      8.797132067100161,
+      8.753847317153845
+    ],
+    "val_losses": [
+      8.806933067508579,
+      8.772377384692124,
+      8.754454656974557
+    ],
+    "learning_rates": [
+      1.0105546822366943e-06,
+      8.982708286548395e-07,
+      7.859869750729845e-07,
+      6.737031214911296e-07,
+      5.614192679092747e-07,
+      4.4913541432741974e-07,
+      3.368515607455648e-07,
+      2.2456770716370987e-07,
+      1.1228385358185493e-07,
+      0.0
+    ],
+    "final_train_loss": 8.753847317153845,
+    "final_val_loss": 8.754454656974557,
+    "best_val_loss": 8.754454656974557
+  },
+  "timestamp": {
+    "saved_at": "2025-06-05T13:16:45.299870",
+    "model_type": "best_model"
+  }
+}

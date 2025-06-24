@@ -1,0 +1,47 @@
+{
+  "_name_or_path": "skt/kobert-base-v1",
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "author": "Heewon Jeon(madjakarta@gmail.com)",
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "\uae30\uc068",
+    "1": "\ub2f9\ud669",
+    "2": "\ubb34\uac10\uc815",
+    "3": "\ubd84\ub178",
+    "4": "\ubd88\uc548",
+    "5": "\uc0c1\ucc98",
+    "6": "\uc2ac\ud514"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "kobert_version": 1.0,
+  "label2id": {
+    "\uae30\uc068": 0,
+    "\ub2f9\ud669": 1,
+    "\ubb34\uac10\uc815": 2,
+    "\ubd84\ub178": 3,
+    "\ubd88\uc548": 4,
+    "\uc0c1\ucc98": 5,
+    "\uc2ac\ud514": 6
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "torch_dtype": "float32",
+  "transformers_version": "4.46.3",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 8002
+}

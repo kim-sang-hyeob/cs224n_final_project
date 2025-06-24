@@ -1,0 +1,117 @@
+{
+  "training_config": {
+    "model_name": "skt/kogpt2-base-v2",
+    "max_length": 512,
+    "num_epochs": 3,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "learning_rate": 0.0001,
+    "warmup_steps": 150,
+    "weight_decay": 0.01,
+    "use_mixed_precision": true,
+    "dataloader_num_workers": 4,
+    "full_finetuning": true,
+    "trainable_layers": 0,
+    "use_lora": false,
+    "lora_r": 32,
+    "lora_alpha": 64,
+    "lora_dropout": 0.05,
+    "lora_target_modules": [
+      "c_attn",
+      "c_proj",
+      "c_fc"
+    ],
+    "use_prefix_tuning": true,
+    "prefix_length": 30,
+    "prefix_dropout": 0.1,
+    "prefix_hidden_size": null,
+    "train_ratio": 0.8,
+    "validation_ratio": 0.1,
+    "test_ratio": 0.1,
+    "data_path": "data/prompt_dataset.json",
+    "topic_start_token": "<|topic:",
+    "topic_end_token": "|>",
+    "use_gpu": true,
+    "device": "cuda",
+    "output_dir": "outputs",
+    "model_save_dir": "saved_models",
+    "logs_dir": "logs",
+    "eval_steps": 500,
+    "save_steps": 1000,
+    "logging_steps": 500,
+    "max_new_tokens": 200,
+    "temperature": 0.8,
+    "top_k": 50,
+    "top_p": 0.9,
+    "do_sample": true,
+    "quiet_mode": false,
+    "progress_bar": true
+  },
+  "command_line_args": {
+    "full_finetuning": true,
+    "head_only": false,
+    "trainable_layers": 0,
+    "lora": false,
+    "lora_r": 32,
+    "lora_alpha": 64,
+    "lora_dropout": 0.05,
+    "lora_target_modules": [
+      "c_attn",
+      "c_proj",
+      "c_fc"
+    ],
+    "prefix_tuning": true,
+    "prefix_length": 30,
+    "prefix_dropout": 0.1,
+    "prefix_hidden_size": null,
+    "gpu": true,
+    "cpu": false,
+    "a100_optimized": false,
+    "mixed_precision": false,
+    "epochs": 3,
+    "lr": 5e-05,
+    "batch_size": 4,
+    "max_length": 512,
+    "quiet": false,
+    "model_name": "skt/kogpt2-base-v2",
+    "mode": "train",
+    "model_path": null
+  },
+  "model_info": {
+    "model_name": "skt/kogpt2-base-v2",
+    "total_parameters": 14787840,
+    "vocab_size": 51203,
+    "max_length": 512
+  },
+  "training_history": {
+    "train_losses": [
+      9.017629482782628,
+      8.889998548555337,
+      8.880220770163463
+    ],
+    "val_losses": [
+      8.869173309852167,
+      8.856697065314068,
+      8.853132312445297
+    ],
+    "learning_rates": [
+      1.998667554963358e-07,
+      1.7765933821896514e-07,
+      1.554519209415945e-07,
+      1.3324450366422386e-07,
+      1.1103708638685322e-07,
+      8.882966910948257e-08,
+      6.662225183211193e-08,
+      4.4414834554741284e-08,
+      2.2207417277370642e-08,
+      0.0
+    ],
+    "final_train_loss": 8.880220770163463,
+    "final_val_loss": 8.853132312445297,
+    "best_val_loss": 8.853132312445297
+  },
+  "timestamp": {
+    "saved_at": "2025-06-07T06:51:42.237789",
+    "model_type": "best_model"
+  }
+}
